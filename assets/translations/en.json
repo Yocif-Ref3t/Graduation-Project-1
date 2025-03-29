@@ -1,0 +1,21 @@
+{
+    "AppName":"Diabeat",
+    "Email":"Email",
+    "EmailDesc":"Enter your email",
+    "Password":"Password",
+    "PasswordDesc":"Enter your password",
+    "Login":"Login",
+    "LoginDesc":"Welcome back to our community",
+    "CreateAccount":"Create account",
+    "ForgotPassword":"Forget your password ?",
+    "DoNotHaveAccount":"Don't have an account?",
+    "OR":"OR",
+    "Register":"Register",
+    "RegisterDesc":"Welcome to our community",
+    "FirstName":"First name",
+    "LastName":"Last name",
+    "Gender":"Gender",
+    "Birthdate":"Birthdate",
+    "Male":"Male",
+    "Female":"Female"
+}

@@ -1,0 +1,21 @@
+{
+    "AppName":"Diabeat",
+    "Email":"البريد الالكتروني",
+    "EmailDesc":"ادخل بريدك الالكتروني",
+    "Password":"كلمة المرور",
+    "PasswordDesc":"ادخل كلمة المرور",
+    "Login":"تسجيل دخول",
+    "LoginDesc":"مرحبا بعودتك مره اخرى",
+    "CreateAccount":"انشأ حساب",
+    "ForgotPassword":"هل نسيت كلمة المرور ؟",
+    "DoNotHaveAccount":"ليس لديك حساب؟",
+    "OR":"أو",
+    "Register":"تسجيل جديد",
+    "RegisterDesc":"مرحبا بك في مجتمعنا",
+    "FirstName":"الأسم الاول",
+    "LastName":"الأسم العائله",
+    "Gender":"الجنس",
+    "Birthdate":"تاريخ الميلاد",
+    "Male":"ذكر",
+    "Female":"انثي"
+}
