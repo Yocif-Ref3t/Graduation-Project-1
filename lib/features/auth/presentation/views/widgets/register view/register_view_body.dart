@@ -18,75 +18,109 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  DateTime? birthdate;
+  int? gender;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: Text(
-              "AppName".tr(),
-              style: context.texts.titleMedium,
-            ),
-          ),
-          SizedBox(height: 20),
-          Text(
-            "Register".tr(),
-            style: context.texts.titleSmall!.copyWith(
-              fontWeight: FontWeight.bold,
-              color: context.colors.primary,
-            ),
-          ),
-          SizedBox(height: 5),
-          Text(
-            "RegisterDesc".tr(),
-            style: context.texts.bodySmall!.copyWith(letterSpacing: 2),
-          ),
-          SizedBox(height: 16),
-          Row(
-            spacing: 16,
+      child: SingleChildScrollView(
+        child: Form(
+          key: formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                child: CustomTextField(
-                  hintText: "FirstName".tr(),
-                  controller: firstNameController,
+              Center(
+                child: Text(
+                  "AppName".tr(),
+                  style: context.texts.titleMedium,
                 ),
               ),
-              Expanded(
-                child: CustomTextField(
-                  hintText: "LastName".tr(),
-                  controller: lastNameController,
+              SizedBox(height: 20),
+              Text(
+                "Register".tr(),
+                style: context.texts.titleSmall!.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: context.colors.primary,
                 ),
+              ),
+              SizedBox(height: 5),
+              Text(
+                "RegisterDesc".tr(),
+                style: context.texts.bodySmall!.copyWith(letterSpacing: 2),
+              ),
+              SizedBox(height: 16),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 16,
+                children: [
+                  Expanded(
+                    child: CustomTextField(
+                      hintText: "FirstName".tr(),
+                      validator: (value) {
+                        if (value != null && value.isNotEmpty) return null;
+                        return "FirstNameDesc".tr();
+                      },
+                      controller: firstNameController,
+                    ),
+                  ),
+                  Expanded(
+                    child: CustomTextField(
+                      hintText: "LastName".tr(),
+                      validator: (value) {
+                        if (value != null && value.isNotEmpty) return null;
+                        return "LastNameDesc".tr();
+                      },
+                      controller: lastNameController,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16),
+              CustomTextField(
+                hintText: "Email".tr(),
+                validator: (value) {
+                  if (value != null && value.isNotEmpty) return null;
+                  return "EmailDesc".tr();
+                },
+                controller: emailController,
+              ),
+              SizedBox(height: 16),
+              CustomTextField(
+                hintText: "Password".tr(),
+                validator: (value) {
+                  if (value != null && value.isNotEmpty) return null;
+                  return "PasswordDesc".tr();
+                },
+                controller: emailController,
+              ),
+              SizedBox(height: 16),
+              CustomDateWidget(
+                hint: "Birthdate".tr(),
+                onChanged: (date) {
+                  birthdate = date;
+                },
+              ),
+              SizedBox(height: 16),
+              GenderWidget(
+                onChanged: (gender) {
+                  this.gender = gender;
+                },
+              ),
+              SizedBox(height: 16),
+              CustomButton(
+                text: "CreateAccount".tr(),
+                onTap: () {
+                  if (formKey.currentState!.validate()) {
+                    if (birthdate == null) return context.showWarning("BirthdateDesc".tr());
+                    if (gender == null) return context.showWarning("GenderDesc".tr());
+                  }
+                },
               ),
             ],
           ),
-          SizedBox(height: 16),
-          CustomTextField(
-            hintText: "Email".tr(),
-            controller: emailController,
-          ),
-          SizedBox(height: 16),
-          CustomTextField(
-            hintText: "Password".tr(),
-            controller: emailController,
-          ),
-          SizedBox(height: 16),
-          CustomDateWidget(
-            hint: "Birthdate".tr(),
-            onChanged: (date) {},
-          ),
-          SizedBox(height: 16),
-          GenderWidget(
-            onChanged: (gender) {},
-          ),
-          SizedBox(height: 16),
-          CustomButton(
-            text: "CreateAccount".tr(),
-            onTap: () {},
-          ),
-        ],
+        ),
       ),
     );
   }

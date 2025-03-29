@@ -13,9 +13,13 @@
     "Register":"Register",
     "RegisterDesc":"Welcome to our community",
     "FirstName":"First name",
+    "FirstNameDesc":"Enter your first name",
     "LastName":"Last name",
+    "LastNameDesc":"Enter your lase name",
     "Gender":"Gender",
+    "GenderDesc":"Select your gender",
     "Birthdate":"Birthdate",
+    "BirthdateDesc":"Enter your birthdate",
     "Male":"Male",
     "Female":"Female"
 }

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graduation_project1/core/widgets/custom_snack_bar.dart';
 
 extension Context on BuildContext {
   /// To push new view on context by using Go Router
@@ -11,6 +12,15 @@ extension Context on BuildContext {
 
   /// To get colors theme of current context
   ColorScheme get colors => ColorScheme.of(this);
+
+  /// To display warning message
+  void showWarning(String message) => ShowCustomSnackBar(this).warning(message);
+
+  /// To display failure message
+  void showFailure(String message) => ShowCustomSnackBar(this).failure(message);
+
+  /// To display success message
+  void showSuccess(String message) => ShowCustomSnackBar(this).done(message);
 }
 
 extension DateExtention on DateTime {
