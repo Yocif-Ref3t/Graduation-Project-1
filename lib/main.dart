@@ -3,11 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:graduation_project1/core/constants/app_router.dart';
 import 'package:graduation_project1/core/constants/app_theme.dart';
+import 'package:graduation_project1/core/constants/database_constants.dart';
 import 'package:graduation_project1/core/constants/translations.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await Supabase.initialize(
+    url: DatabaseConstants.databaseURL,
+    anonKey: DatabaseConstants.anonKey,
+  );
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarBrightness: Brightness.light,
     statusBarIconBrightness: Brightness.light,
