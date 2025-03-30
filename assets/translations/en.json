@@ -23,5 +23,6 @@
     "Male":"Male",
     "Female":"Female",
     "ResetPasswordDesc":"You will receive an email to reset your password",
-    "Send":"Send"
+    "Send":"Send",
+    "ResetPasswordSuccess":"Reset password email has been sent"
 }

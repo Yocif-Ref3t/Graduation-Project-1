@@ -43,4 +43,14 @@ class AuthRepoImpl implements AuthRepo {
       return left(Failure.defaultMessage());
     }
   }
+
+  @override
+  Future<Either<Failure, bool>> resetPassword(String email) async {
+    try {
+      await SupabaseServices.resetPassword(email);
+      return right(true);
+    } catch (ex) {
+      return left(Failure.defaultMessage());
+    }
+  }
 }

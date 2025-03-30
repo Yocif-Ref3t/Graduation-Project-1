@@ -24,4 +24,8 @@ abstract class SupabaseServices {
     );
     return response;
   }
+
+  static Future resetPassword(String email) async {
+    await _auth.resetPasswordForEmail(email);
+  }
 }

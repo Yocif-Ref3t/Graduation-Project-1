@@ -7,6 +7,9 @@ extension Context on BuildContext {
   /// To push new view on context by using Go Router
   void goPush(String view) => GoRouter.of(this).push(view);
 
+  /// To pop current view on context by using Go Router
+  void goPop() => GoRouter.of(this).pop();
+
   /// To get texts theme of current context
   TextTheme get texts => TextTheme.of(this);
 

@@ -7,4 +7,5 @@ import 'package:graduation_project1/features/auth/presentation/manager/register%
 abstract class AuthRepo {
   Future<Either<Failure, UserModel>> register(RegisterCubit data);
   Future<Either<Failure, UserModel>> login(LoginCubit data);
+  Future<Either<Failure, bool>> resetPassword(String email);
 }
