@@ -7,7 +7,8 @@ part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
   RegisterCubit() : super(RegisterInitial());
-  String? name, email, password, birthdate, gender;
+  String? name, email, password, gender;
+  DateTime? birthdate;
   int? age;
 
   void register() async {

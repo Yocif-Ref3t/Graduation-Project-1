@@ -21,5 +21,7 @@
     "Birthdate":"Birthdate",
     "BirthdateDesc":"Enter your birthdate",
     "Male":"Male",
-    "Female":"Female"
+    "Female":"Female",
+    "ResetPasswordDesc":"You will receive an email to reset your password",
+    "Send":"Send"
 }

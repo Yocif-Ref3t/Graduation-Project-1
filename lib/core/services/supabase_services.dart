@@ -14,4 +14,14 @@ abstract class SupabaseServices {
     response.user!.appMetadata.addAll({'id': response.user!.id});
     return response;
   }
+
+  static Future<AuthResponse> login(Map<String, dynamic> data) async {
+    final String email = data['email'];
+    final String password = data['password'];
+    AuthResponse response = await _auth.signInWithPassword(
+      email: email,
+      password: password,
+    );
+    return response;
+  }
 }

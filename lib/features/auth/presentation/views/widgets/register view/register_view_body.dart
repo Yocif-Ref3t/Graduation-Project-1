@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:graduation_project1/core/constants/app_constants.dart';
+import 'package:graduation_project1/core/constants/routes.dart';
 import 'package:graduation_project1/core/extensions/extensions.dart';
 import 'package:graduation_project1/core/widgets/custom_button.dart';
 import 'package:graduation_project1/core/widgets/custom_date_widget.dart';
@@ -32,13 +33,16 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
       listener: (context, state) {
         if (state is RegisterLoading) {
           isLoading = true;
+          setState(() {});
         } else if (state is RegisterSuccess) {
           isLoading = false;
+          setState(() {});
+          context.goPush(Routes.layoutView);
         } else if (state is RegisterFailure) {
           isLoading = false;
+          setState(() {});
           context.showFailure(state.message);
         }
-        setState(() {});
       },
       child: Padding(
         padding: EdgeInsets.all(16),
@@ -143,7 +147,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                       cubit.name = "${firstNameController.text} ${lastNameController.text}";
                       cubit.email = emailController.text;
                       cubit.password = passwordController.text;
-                      cubit.birthdate = birthdate!.format();
+                      cubit.birthdate = birthdate;
                       cubit.age = DateTime.now().year - birthdate!.year;
                       cubit.gender = AppConstants.genderMap[gender];
                       cubit.register();
