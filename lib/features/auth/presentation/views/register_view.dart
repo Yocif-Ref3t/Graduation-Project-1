@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:graduation_project1/features/auth/presentation/manager/register%20cubit/register_cubit.dart';
 import 'package:graduation_project1/features/auth/presentation/views/widgets/register%20view/register_view_body.dart';
 
 class RegisterView extends StatelessWidget {
@@ -6,8 +8,11 @@ class RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(child: RegisterViewBody()),
+    return BlocProvider(
+      create: (context) => RegisterCubit(),
+      child: Scaffold(
+        body: SafeArea(child: RegisterViewBody()),
+      ),
     );
   }
 }
