@@ -24,5 +24,8 @@
     "Female":"Female",
     "ResetPasswordDesc":"You will receive an email to reset your password",
     "Send":"Send",
-    "ResetPasswordSuccess":"Reset password email has been sent"
+    "ResetPasswordSuccess":"Reset password email has been sent",
+    "InvalidCredentials":"Email or password is incorrect",
+    "ValidMail":"Please enter a valid email",
+    "EmailAlreadyExists":"Email already exists"
 }

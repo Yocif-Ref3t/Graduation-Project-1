@@ -34,7 +34,7 @@ class _CustomDateWidgetState extends State<CustomDateWidget> {
         widget.onChanged(_selectedDate!);
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: 10),
         width: double.maxFinite,
         height: 48,
         decoration: BoxDecoration(

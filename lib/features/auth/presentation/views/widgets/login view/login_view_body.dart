@@ -69,6 +69,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 icon: Icons.mail,
                 validator: (value) {
                   if (value == null || value.isEmpty) return "EmailDesc".tr();
+                  if (!value.isEmail()) return "ValidMail".tr();
                   return null;
                 },
                 controller: emailController,

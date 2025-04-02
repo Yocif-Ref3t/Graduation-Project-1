@@ -23,6 +23,9 @@ class AuthRepoImpl implements AuthRepo {
         return right(UserModel.fromJson(response));
       }
       return left(Failure.defaultMessage());
+    } on AuthException catch (ex) {
+      print(ex);
+      return left(Failure.supabaseAuth(ex));
     } catch (ex) {
       return Left(Failure.defaultMessage());
     }
@@ -39,6 +42,8 @@ class AuthRepoImpl implements AuthRepo {
         return right(UserModel.fromJson(response));
       }
       return left(Failure.defaultMessage());
+    } on AuthApiException catch (ex) {
+      return left(Failure.supabaseAuth(ex));
     } catch (ex) {
       return left(Failure.defaultMessage());
     }
