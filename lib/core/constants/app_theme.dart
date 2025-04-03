@@ -5,6 +5,7 @@ import 'package:graduation_project1/core/constants/app_fonts.dart';
 abstract class AppTheme {
   static ThemeData light = ThemeData(
     scaffoldBackgroundColor: AppColors.background,
+    fontFamily: "Almarai",
     textTheme: TextTheme(
       titleLarge: AppFonts.titleLarge,
       titleMedium: AppFonts.titleMedium,

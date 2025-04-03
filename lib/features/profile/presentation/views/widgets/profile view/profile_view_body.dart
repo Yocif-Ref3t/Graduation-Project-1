@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'profile_card.dart';
 import 'category_item.dart';
@@ -15,23 +16,23 @@ class ProfileViewBody extends StatelessWidget {
           ProfileCard(),
           CategoryItem(
             icon: Icons.security,
-            title: "Security",
+            title: "Security".tr(),
             onTap: () {},
           ),
           CategoryItem(
             icon: Icons.person,
-            title: "Account",
+            title: "Account".tr(),
             onTap: () {},
           ),
           CategoryItem(
             icon: Icons.history,
-            title: "History",
+            title: "History".tr(),
             onTap: () {},
           ),
           Divider(color: Colors.grey),
           CategoryItem(
             icon: Icons.logout,
-            title: "Logout",
+            title: "Logout".tr(),
             onTap: () {},
             color: Colors.red,
           ),

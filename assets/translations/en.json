@@ -28,14 +28,19 @@
     "InvalidCredentials":"Email or password is incorrect",
     "ValidMail":"Please enter a valid email",
     "EmailAlreadyExists":"Email already exists",
-   
+
     "Settings":"Settings",
     "Profile":"Profile",
-    "Logout":"Logout",
-    "Security":"Security",
     "Account":"Account",
+
+    "Security":"Security",
+    "Home":"Home",
     "History":"History",
-    "Notifications":"Notifications",
-    "Help":"Help",
-    "AboutUs":"About Us"
+    "Logout":"Logout"   ,
+    "Language":"Language",
+    "LanguageDesc":"Select language",
+    "Storage":"Storage",
+    "AboutUs":"About Us",
+    "Help":"Help"
+
 }

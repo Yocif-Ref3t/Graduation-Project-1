@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:graduation_project1/core/extensions/extensions.dart';
 
@@ -33,7 +34,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         children: [
           CustomBottomNavigationBarItem(
             icon: Icons.home,
-            label: "Home",
+            label: "Home".tr(),
             isSelected: currentIndex == 0,
             onTap: () {
               if (currentIndex == 0) return;
@@ -44,7 +45,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.person,
-            label: "Profile",
+            label: "Profile".tr(),
             isSelected: currentIndex == 1,
             onTap: () {
               if (currentIndex == 1) return;
@@ -55,7 +56,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.settings,
-            label: "Settings",
+            label: "Settings".tr(),
             isSelected: currentIndex == 2,
             onTap: () {
               if (currentIndex == 2) return;

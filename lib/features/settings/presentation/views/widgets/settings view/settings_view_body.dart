@@ -27,7 +27,7 @@ class SettingsViewBody extends StatelessWidget {
             onTap: () {},
           ),
           CategoryItem(
-            title: "About Us".tr(),
+            title: "AboutUs".tr(),
             icon: Icons.info_outline,
             onTap: () {},
           ),

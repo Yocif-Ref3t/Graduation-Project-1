@@ -26,13 +26,20 @@
     "InvalidCredentials": "البريد الالكتروني أو كلمة المرور غير صالحة",
     "ValidMail":"يرجى إدخال بريد الكتورني الصالح",
     "EmailAlreadyExists":"البريد الالكتروني مستخدم بالفعل",
+   
+   
     "Settings":"الاعدادات",
     "Profile":"الحساب",
-    "Logout":"تسجيل الخروج",
-    "Security":"الأمان",
     "Account":"الحساب",
-    "History":"التاريخ",
-    "Notifications":"الإشعارات",
-    "Help":"المساعدة",
-    "AboutUs":"من نحن"
+    "Security":"الأمان",
+    "Home":"الرئيسية",
+    "History":"السجل",
+    "Logout":"تسجيل الخروج",
+
+    "Language":"اللغة",
+    "LanguageDesc":"اختر اللغة",
+    "Storage":"التخزين",
+    "AboutUs":"من نحن",
+    "Help":"المساعدة"
+    
 }
