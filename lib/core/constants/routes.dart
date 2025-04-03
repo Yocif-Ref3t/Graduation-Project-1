@@ -5,4 +5,5 @@ abstract class Routes {
   static const String resetPasswordView = '/resetPasswordView';
   static const String profileView = '/profileView';
   static const String settingsView = '/settingsView';
+  static const String languageView = '/languageView';
 }

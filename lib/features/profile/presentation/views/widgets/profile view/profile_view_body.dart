@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile_card.dart';
-import 'profile_category_item.dart';
+import 'category_item.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({super.key});
@@ -13,22 +13,26 @@ class ProfileViewBody extends StatelessWidget {
         spacing: 16,
         children: [
           ProfileCard(),
-          ProfileCategoryItem(
+          CategoryItem(
             icon: Icons.security,
             title: "Security",
+            onTap: () {},
           ),
-          ProfileCategoryItem(
+          CategoryItem(
             icon: Icons.person,
             title: "Account",
+            onTap: () {},
           ),
-          ProfileCategoryItem(
+          CategoryItem(
             icon: Icons.history,
             title: "History",
+            onTap: () {},
           ),
           Divider(color: Colors.grey),
-          ProfileCategoryItem(
+          CategoryItem(
             icon: Icons.logout,
             title: "Logout",
+            onTap: () {},
             color: Colors.red,
           ),
         ],

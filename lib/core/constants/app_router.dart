@@ -5,6 +5,7 @@ import 'package:graduation_project1/features/auth/presentation/views/register_vi
 import 'package:graduation_project1/features/auth/presentation/views/reset_password_view.dart';
 import 'package:graduation_project1/features/layout/presentation/views/layout_view.dart';
 import 'package:graduation_project1/features/profile/presentation/views/profile_view.dart';
+import 'package:graduation_project1/features/settings/presentation/views/language_view.dart';
 import 'package:graduation_project1/features/settings/presentation/views/settings_view.dart';
 import 'package:graduation_project1/features/splash/presentation/views/splash_view.dart';
 
@@ -39,6 +40,10 @@ abstract class AppRouter {
             builder: (context, state) => SettingsView(),
           ),
         ],
+      ),
+      GoRoute(
+        path: Routes.languageView,
+        builder: (context, state) => LanguageView(),
       ),
     ],
   );
