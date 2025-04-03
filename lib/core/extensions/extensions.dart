@@ -6,10 +6,13 @@ import 'package:graduation_project1/core/widgets/custom_snack_bar.dart';
 
 extension Context on BuildContext {
   /// To push new view on context by using Go Router
-  void goPush(String view) => GoRouter.of(this).push(view);
+  void routerPush(String view) => GoRouter.of(this).push(view);
 
   /// To pop current view on context by using Go Router
-  void goPop() => GoRouter.of(this).pop();
+  void routerPop() => GoRouter.of(this).pop();
+
+  /// To Remove all views from stack and navigate to new view
+  void routerGo(String view) => GoRouter.of(this).go(view);
 
   /// To get texts theme of current context
   TextTheme get texts => TextTheme.of(this);

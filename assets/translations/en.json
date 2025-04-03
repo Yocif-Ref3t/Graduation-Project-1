@@ -27,5 +27,15 @@
     "ResetPasswordSuccess":"Reset password email has been sent",
     "InvalidCredentials":"Email or password is incorrect",
     "ValidMail":"Please enter a valid email",
-    "EmailAlreadyExists":"Email already exists"
+    "EmailAlreadyExists":"Email already exists",
+   
+    "Settings":"Settings",
+    "Profile":"Profile",
+    "Logout":"Logout",
+    "Security":"Security",
+    "Account":"Account",
+    "History":"History",
+    "Notifications":"Notifications",
+    "Help":"Help",
+    "AboutUs":"About Us"
 }

@@ -30,7 +30,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         } else if (state is LoginSuccess) {
           isLoading = false;
           setState(() {});
-          context.goPush(Routes.layoutView);
+          context.routerPush(Routes.profileView);
         } else if (state is LoginFailure) {
           isLoading = false;
           setState(() {});
@@ -92,7 +92,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
-                  context.goPush(Routes.resetPasswordView);
+                  context.routerPush(Routes.resetPasswordView);
                 },
                 child: Text(
                   "ForgotPassword".tr(),
@@ -128,7 +128,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 text: "CreateAccount".tr(),
                 background: Colors.transparent,
                 onTap: () {
-                  context.goPush(Routes.registerView);
+                  context.routerPush(Routes.registerView);
                 },
               ),
             ],

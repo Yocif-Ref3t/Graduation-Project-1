@@ -24,7 +24,6 @@ class AuthRepoImpl implements AuthRepo {
       }
       return left(Failure.defaultMessage());
     } on AuthException catch (ex) {
-      print(ex);
       return left(Failure.supabaseAuth(ex));
     } catch (ex) {
       return Left(Failure.defaultMessage());

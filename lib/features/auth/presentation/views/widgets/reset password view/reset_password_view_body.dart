@@ -28,7 +28,7 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
         } else if (state is ResetPasswordSuccess) {
           isLoading = false;
           setState(() {});
-          context.goPop();
+          context.routerPop();
           context.showSuccess("ResetPasswordSuccess".tr());
         } else if (state is ResetPasswordFailure) {
           isLoading = false;

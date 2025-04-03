@@ -37,7 +37,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
         } else if (state is RegisterSuccess) {
           isLoading = false;
           setState(() {});
-          context.goPush(Routes.layoutView);
+          context.routerPush(Routes.profileView);
         } else if (state is RegisterFailure) {
           isLoading = false;
           setState(() {});
