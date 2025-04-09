@@ -41,6 +41,15 @@
     "LanguageDesc":"Select language",
     "Storage":"Storage",
     "AboutUs":"About Us",
-    "Help":"Help"
-
+    "Help":"Help",
+    "CompleteProfile":"Complete Profile",
+    "ChangePassword":"Change Password",
+    "OldPassword":"Old Password",
+    "NewPassword":"New Password",
+    "ConfirmPassword":"Confirm Password",
+    "Save":"Save",
+    "RequiredField":"This field is required",
+    "PasswordNotMatch":"Password not match",
+    "StartExamination":"Start Examination",
+    "Examination":"Examination"
 }

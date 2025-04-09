@@ -37,7 +37,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
         } else if (state is RegisterSuccess) {
           isLoading = false;
           setState(() {});
-          context.routerPush(Routes.profileView);
+          context.routerGo(Routes.homeView);
         } else if (state is RegisterFailure) {
           isLoading = false;
           setState(() {});
@@ -54,13 +54,13 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
               children: [
                 Center(
                   child: Text(
-                    "AppName".tr(),
+                    "AppName".tr(context: context),
                     style: context.texts.titleMedium,
                   ),
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "Register".tr(),
+                  "Register".tr(context: context),
                   style: context.texts.titleSmall!.copyWith(
                     fontWeight: FontWeight.bold,
                     color: context.colors.primary,
@@ -68,7 +68,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  "RegisterDesc".tr(),
+                  "RegisterDesc".tr(context: context),
                   style: context.texts.bodySmall!.copyWith(letterSpacing: 2),
                 ),
                 SizedBox(height: 16),
@@ -78,20 +78,20 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                   children: [
                     Expanded(
                       child: CustomTextField(
-                        hintText: "FirstName".tr(),
+                        hintText: "FirstName".tr(context: context),
                         validator: (value) {
                           if (value != null && value.isNotEmpty) return null;
-                          return "FirstNameDesc".tr();
+                          return "FirstNameDesc".tr(context: context);
                         },
                         controller: firstNameController,
                       ),
                     ),
                     Expanded(
                       child: CustomTextField(
-                        hintText: "LastName".tr(),
+                        hintText: "LastName".tr(context: context),
                         validator: (value) {
                           if (value != null && value.isNotEmpty) return null;
-                          return "LastNameDesc".tr();
+                          return "LastNameDesc".tr(context: context);
                         },
                         controller: lastNameController,
                       ),
@@ -100,17 +100,17 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 ),
                 SizedBox(height: 16),
                 CustomTextField(
-                  hintText: "Email".tr(),
+                  hintText: "Email".tr(context: context),
                   icon: Icons.email,
                   validator: (value) {
                     if (value != null && value.isNotEmpty) return null;
-                    return "EmailDesc".tr();
+                    return "EmailDesc".tr(context: context);
                   },
                   controller: emailController,
                 ),
                 SizedBox(height: 16),
                 CustomTextField(
-                  hintText: "Password".tr(),
+                  hintText: "Password".tr(context: context),
                   obscureText: !showPassword,
                   icon: showPassword ? Icons.visibility : Icons.visibility_off,
                   iconTap: () {
@@ -119,13 +119,13 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                   },
                   validator: (value) {
                     if (value != null && value.isNotEmpty) return null;
-                    return "PasswordDesc".tr();
+                    return "PasswordDesc".tr(context: context);
                   },
                   controller: passwordController,
                 ),
                 SizedBox(height: 16),
                 CustomDateWidget(
-                  hint: "Birthdate".tr(),
+                  hint: "Birthdate".tr(context: context),
                   onChanged: (date) {
                     birthdate = date;
                   },
@@ -138,12 +138,16 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 ),
                 SizedBox(height: 16),
                 CustomButton(
-                  text: "CreateAccount".tr(),
+                  text: "CreateAccount".tr(context: context),
                   isLoading: isLoading,
                   onTap: () {
                     if (formKey.currentState!.validate()) {
-                      if (birthdate == null) return context.showWarning("BirthdateDesc".tr());
-                      if (gender == null) return context.showWarning("GenderDesc".tr());
+                      if (birthdate == null) {
+                        return context.showWarning("BirthdateDesc".tr(context: context));
+                      }
+                      if (gender == null) {
+                        return context.showWarning("GenderDesc".tr(context: context));
+                      }
                       cubit.name = "${firstNameController.text} ${lastNameController.text}";
                       cubit.email = emailController.text;
                       cubit.password = passwordController.text;

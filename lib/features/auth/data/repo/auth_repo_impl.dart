@@ -57,4 +57,14 @@ class AuthRepoImpl implements AuthRepo {
       return left(Failure.defaultMessage());
     }
   }
+
+  @override
+  Future<Either<Failure, bool>> logout() async {
+    try {
+      await SupabaseServices.logout();
+      return right(true);
+    } catch (ex) {
+      return left(Failure.defaultMessage());
+    }
+  }
 }

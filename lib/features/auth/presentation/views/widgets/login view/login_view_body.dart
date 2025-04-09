@@ -30,7 +30,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         } else if (state is LoginSuccess) {
           isLoading = false;
           setState(() {});
-          context.routerPush(Routes.profileView);
+          context.routerGo(Routes.homeView);
         } else if (state is LoginFailure) {
           isLoading = false;
           setState(() {});
@@ -46,13 +46,13 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             children: [
               Center(
                 child: Text(
-                  "AppName".tr(),
+                  "AppName".tr(context: context),
                   style: context.texts.titleMedium,
                 ),
               ),
               SizedBox(height: 20),
               Text(
-                "Login".tr(),
+                "Login".tr(context: context),
                 style: context.texts.titleSmall!.copyWith(
                   fontWeight: FontWeight.bold,
                   color: context.colors.primary,
@@ -60,27 +60,27 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               SizedBox(height: 5),
               Text(
-                "LoginDesc".tr(),
+                "LoginDesc".tr(context: context),
                 style: context.texts.bodySmall!.copyWith(letterSpacing: 2),
               ),
               SizedBox(height: 16),
               CustomTextField(
-                hintText: "Email".tr(),
+                hintText: "Email".tr(context: context),
                 icon: Icons.mail,
                 validator: (value) {
-                  if (value == null || value.isEmpty) return "EmailDesc".tr();
-                  if (!value.isEmail()) return "ValidMail".tr();
+                  if (value == null || value.isEmpty) return "EmailDesc".tr(context: context);
+                  if (!value.isEmail()) return "ValidMail".tr(context: context);
                   return null;
                 },
                 controller: emailController,
               ),
               SizedBox(height: 16),
               CustomTextField(
-                hintText: "Password".tr(),
+                hintText: "Password".tr(context: context),
                 obscureText: !showPassword,
                 icon: showPassword ? Icons.visibility : Icons.visibility_off,
                 validator: (value) {
-                  if (value == null || value.isEmpty) return "PasswordDesc".tr();
+                  if (value == null || value.isEmpty) return "PasswordDesc".tr(context: context);
                   return null;
                 },
                 iconTap: () {
@@ -95,7 +95,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   context.routerPush(Routes.resetPasswordView);
                 },
                 child: Text(
-                  "ForgotPassword".tr(),
+                  "ForgotPassword".tr(context: context),
                   style: context.texts.bodySmall!.copyWith(
                     color: context.colors.primary,
                   ),
@@ -103,7 +103,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
               SizedBox(height: 16),
               CustomButton(
-                text: "Login".tr(),
+                text: "Login".tr(context: context),
                 isLoading: isLoading,
                 onTap: () {
                   if (formKey.currentState!.validate()) {
@@ -118,14 +118,14 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 children: [
                   Expanded(child: Divider(color: Colors.grey)),
                   SizedBox(width: 10),
-                  Text("OR".tr(), style: context.texts.bodySmall),
+                  Text("OR".tr(context: context), style: context.texts.bodySmall),
                   SizedBox(width: 10),
                   Expanded(child: Divider(color: Colors.grey)),
                 ],
               ),
               SizedBox(height: 16),
               CustomButton(
-                text: "CreateAccount".tr(),
+                text: "CreateAccount".tr(context: context),
                 background: Colors.transparent,
                 onTap: () {
                   context.routerPush(Routes.registerView);

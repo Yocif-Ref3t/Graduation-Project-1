@@ -19,17 +19,15 @@ class _LanguageViewBodyState extends State<LanguageViewBody> {
         LanguageItem(
           title: "Arabic",
           isSelected: currentLanguage == "ar",
-          onTap: () {
-            context.setLocale(Locale("ar"));
-            setState(() {});
+          onTap: () async {
+            EasyLocalization.of(context)!.setLocale(Locale('ar'));
           },
         ),
         LanguageItem(
           title: "English",
           isSelected: currentLanguage == "en",
-          onTap: () {
-            context.setLocale(Locale("en"));
-            setState(() {});
+          onTap: () async {
+            EasyLocalization.of(context)!.setLocale(Locale('en'));
           },
         ),
       ],

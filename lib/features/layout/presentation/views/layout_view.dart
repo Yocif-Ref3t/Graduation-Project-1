@@ -12,7 +12,7 @@ class LayoutView extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavigationBar(
         onChange: (index) {
-          if (index == 0) context.routerGo(Routes.profileView);
+          if (index == 0) context.routerGo(Routes.homeView);
           if (index == 1) context.routerGo(Routes.profileView);
           if (index == 2) context.routerGo(Routes.settingsView);
         },

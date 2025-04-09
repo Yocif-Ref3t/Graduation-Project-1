@@ -15,26 +15,28 @@ class SettingsViewBody extends StatelessWidget {
         spacing: 16,
         children: [
           CategoryItem(
-            title: "Language".tr(),
+            title: "Language".tr(context: context),
             icon: Icons.language,
             onTap: () {
               context.routerPush(Routes.languageView);
             },
           ),
           CategoryItem(
-            title: "Storage".tr(),
+            title: "Storage".tr(context: context),
             icon: Icons.storage,
             onTap: () {},
           ),
           CategoryItem(
-            title: "AboutUs".tr(),
+            title: "AboutUs".tr(context: context),
             icon: Icons.info_outline,
             onTap: () {},
           ),
           CategoryItem(
-            title: "Help".tr(),
+            title: "Help".tr(context: context),
             icon: Icons.help_outline,
-            onTap: () {},
+            onTap: () {
+              context.routerPush(Routes.helpView);
+            },
           ),
         ],
       ),

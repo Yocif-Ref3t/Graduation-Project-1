@@ -6,7 +6,7 @@
     "PasswordDesc":"ادخل كلمة المرور",
     "Login":"تسجيل دخول",
     "LoginDesc":"مرحبا بعودتك مره اخرى",
-    "CreateAccount":"انشأ حساب",
+    "CreateAccount":"انشاء حساب",
     "ForgotPassword":"هل نسيت كلمة المرور ؟",
     "DoNotHaveAccount":"ليس لديك حساب؟",
     "OR":"أو",
@@ -40,6 +40,15 @@
     "LanguageDesc":"اختر اللغة",
     "Storage":"التخزين",
     "AboutUs":"من نحن",
-    "Help":"المساعدة"
-    
+    "Help":"المساعدة",
+    "CompleteProfile":"اكمل الحساب",
+    "ChangePassword":"تعديل كلمة المرور",
+    "OldPassword":"كلمة المرور القديمة",
+    "NewPassword":"كلمة المرور الجديدة",
+    "ConfirmPassword":"تاكيد كلمة المرور",
+    "Save":"حفظ",
+    "RequiredField":"هذا الحقل مطلوب",
+    "PasswordNotMatch":"كلمة المرور غير متطابقة",
+    "StartExamination":"ابدأ الفحص",
+    "Examination":"فحص"
 }

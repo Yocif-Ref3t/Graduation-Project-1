@@ -34,7 +34,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         children: [
           CustomBottomNavigationBarItem(
             icon: Icons.home,
-            label: "Home".tr(),
+            label: "Home".tr(context: context),
             isSelected: currentIndex == 0,
             onTap: () {
               if (currentIndex == 0) return;
@@ -45,7 +45,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.person,
-            label: "Profile".tr(),
+            label: "Profile".tr(context: context),
             isSelected: currentIndex == 1,
             onTap: () {
               if (currentIndex == 1) return;
@@ -56,7 +56,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.settings,
-            label: "Settings".tr(),
+            label: "Settings".tr(context: context),
             isSelected: currentIndex == 2,
             onTap: () {
               if (currentIndex == 2) return;
@@ -88,23 +88,21 @@ class CustomBottomNavigationBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        child: Column(
-          spacing: 5,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              icon,
-              size: isSelected ? 28 : 27,
-              color: isSelected ? context.colors.primary : Colors.white70,
+      child: Column(
+        spacing: 5,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            icon,
+            size: isSelected ? 28 : 27,
+            color: isSelected ? context.colors.primary : Colors.white70,
+          ),
+          if (isSelected)
+            Text(
+              label,
+              style: TextStyle(fontSize: 13, color: context.colors.primary),
             ),
-            if (isSelected)
-              Text(
-                label,
-                style: TextStyle(fontSize: 13, color: context.colors.primary),
-              ),
-          ],
-        ),
+        ],
       ),
     );
   }

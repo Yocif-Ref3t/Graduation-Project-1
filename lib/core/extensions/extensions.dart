@@ -32,7 +32,8 @@ extension Context on BuildContext {
 
 extension DateExtention on DateTime {
   // To get formatted date ( 25 March 2000 )
-  String format([String? pattern]) => DateFormat(pattern ?? 'd MMMM y').format(this);
+  String format([String? pattern, String? locale]) =>
+      DateFormat(pattern ?? 'd MMMM y', locale).format(this);
 }
 
 extension StringExtension on String {

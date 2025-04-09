@@ -18,7 +18,7 @@ class _GenderWidgetState extends State<GenderWidget> {
       spacing: 10,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Gender".tr(), style: context.texts.bodyMedium),
+        Text("Gender".tr(context: context), style: context.texts.bodyMedium),
         Row(
           spacing: 16,
           children: [
@@ -36,7 +36,7 @@ class _GenderWidgetState extends State<GenderWidget> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Center(
-                    child: Text("Male".tr(), style: context.texts.bodyLarge),
+                    child: Text("Male".tr(context: context), style: context.texts.bodyLarge),
                   ),
                 ),
               ),
@@ -55,7 +55,7 @@ class _GenderWidgetState extends State<GenderWidget> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Center(
-                    child: Text("Female".tr(), style: context.texts.bodyLarge),
+                    child: Text("Female".tr(context: context), style: context.texts.bodyLarge),
                   ),
                 ),
               ),

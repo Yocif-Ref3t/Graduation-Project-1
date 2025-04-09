@@ -8,4 +8,5 @@ abstract class AuthRepo {
   Future<Either<Failure, UserModel>> register(RegisterCubit data);
   Future<Either<Failure, UserModel>> login(LoginCubit data);
   Future<Either<Failure, bool>> resetPassword(String email);
+  Future<Either<Failure, bool>> logout();
 }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:graduation_project1/core/extensions/extensions.dart';
 
@@ -45,7 +46,7 @@ class _CustomDateWidgetState extends State<CustomDateWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              _selectedDate?.format() ?? widget.hint,
+              _selectedDate?.format(null, context.locale.languageCode) ?? widget.hint,
               style: context.texts.bodySmall!.copyWith(
                 color: _selectedDate == null ? Colors.grey : Colors.white,
               ),

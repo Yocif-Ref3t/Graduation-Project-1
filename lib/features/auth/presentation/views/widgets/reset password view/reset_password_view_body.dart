@@ -29,7 +29,7 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
           isLoading = false;
           setState(() {});
           context.routerPop();
-          context.showSuccess("ResetPasswordSuccess".tr());
+          context.showSuccess("ResetPasswordSuccess".tr(context: context));
         } else if (state is ResetPasswordFailure) {
           isLoading = false;
           setState(() {});
@@ -46,20 +46,20 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "ResetPasswordDesc".tr(),
+                "ResetPasswordDesc".tr(context: context),
                 style: context.texts.bodyLarge,
               ),
               CustomTextField(
-                hintText: "Email".tr(),
+                hintText: "Email".tr(context: context),
                 icon: Icons.email,
                 validator: (value) {
-                  if (value == null || value.isEmpty) return "EmailDesc".tr();
+                  if (value == null || value.isEmpty) return "EmailDesc".tr(context: context);
                   return null;
                 },
                 controller: emailController,
               ),
               CustomButton(
-                text: "Send".tr(),
+                text: "Send".tr(context: context),
                 isLoading: isLoading,
                 onTap: () {
                   if (formKey.currentState!.validate()) {

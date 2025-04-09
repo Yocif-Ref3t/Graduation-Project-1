@@ -6,12 +6,14 @@ class CategoryItem extends StatelessWidget {
   final IconData icon;
   final Color? color;
   final void Function() onTap;
+  final bool? isLoading;
   const CategoryItem({
     super.key,
     required this.title,
     required this.icon,
     required this.onTap,
     this.color,
+    this.isLoading = false,
   });
 
   @override
@@ -31,7 +33,8 @@ class CategoryItem extends StatelessWidget {
             SizedBox(width: 10),
             Text(title, style: context.texts.bodyLarge!.copyWith(color: color)),
             Spacer(),
-            Icon(Icons.arrow_forward_ios_rounded, color: color ?? Colors.white54)
+            if (!isLoading!) Icon(Icons.arrow_forward_ios_rounded, color: color ?? Colors.white54),
+            if (isLoading!) SizedBox(width: 15, height: 15, child: CircularProgressIndicator()),
           ],
         ),
       ),

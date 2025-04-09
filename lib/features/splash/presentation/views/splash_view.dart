@@ -18,8 +18,9 @@ class SplashView extends StatelessWidget {
           onLoaded: (value) async {
             bool isLoggedIn = Supabase.instance.client.auth.currentUser != null;
             await Future.delayed(value.duration);
-            if (context.mounted)
-              context.routerPush(isLoggedIn ? Routes.profileView : Routes.loginView);
+            if (context.mounted) {
+              context.routerPush(isLoggedIn ? Routes.homeView : Routes.loginView);
+            }
           },
         ),
       ),

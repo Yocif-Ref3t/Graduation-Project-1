@@ -9,7 +9,7 @@ class LanguageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "LanguageDesc".tr()),
+      appBar: CustomAppBar(title: "LanguageDesc".tr(context: context)),
       body: const LanguageViewBody(),
     );
   }

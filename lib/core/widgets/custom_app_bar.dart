@@ -13,10 +13,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Row(
           children: [
             GestureDetector(
-                onTap: () {
-                  context.routerPop();
-                },
-                child: Icon(Icons.arrow_back_ios)),
+              onTap: () => context.routerPop(),
+              child: Icon(Icons.arrow_back_ios),
+            ),
             SizedBox(width: 10),
             Text(
               title,
