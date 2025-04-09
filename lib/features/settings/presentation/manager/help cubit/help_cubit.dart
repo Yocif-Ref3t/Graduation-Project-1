@@ -8,7 +8,9 @@ class HelpCubit extends Cubit<HelpState> {
   HelpCubit() : super(HelpInitial());
 
   void getHelp() async {
-    emit(HelpLoading());
+    Future.delayed(const Duration(microseconds: 0)).whenComplete(() {
+      emit(HelpLoading());
+    });
     final response = await HelpRepoImpl().getHelp();
     response.fold(
       (l) => emit(HelpFailure(message: l.message)),
