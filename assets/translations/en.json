@@ -51,5 +51,6 @@
     "RequiredField":"This field is required",
     "PasswordNotMatch":"Password not match",
     "CheckYourSelf":"Check your self",
-    "Check":"Check"
+    "Check":"Check",
+    "Next":"Next"
 }

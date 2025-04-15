@@ -50,5 +50,6 @@
     "RequiredField":"هذا الحقل مطلوب",
     "PasswordNotMatch":"كلمة المرور غير متطابقة",
     "CheckYourSelf":"افحص نفسك",
-    "Check":"افحص"
+    "Check":"افحص",
+    "Next":"التالي"
 }

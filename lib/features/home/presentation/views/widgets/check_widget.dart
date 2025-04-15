@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:graduation_project1/core/constants/routes.dart';
 import 'package:graduation_project1/core/extensions/extensions.dart';
 import 'package:graduation_project1/core/widgets/custom_button.dart';
 
@@ -25,7 +26,9 @@ class CheckWidget extends StatelessWidget {
           ),
           CustomButton(
             text: "Check".tr(context: context),
-            onTap: () {},
+            onTap: () {
+              context.routerPush(Routes.checkView);
+            },
           ),
         ],
       ),
