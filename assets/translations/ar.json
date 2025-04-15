@@ -49,6 +49,6 @@
     "Save":"حفظ",
     "RequiredField":"هذا الحقل مطلوب",
     "PasswordNotMatch":"كلمة المرور غير متطابقة",
-    "StartExamination":"ابدأ الفحص",
-    "Examination":"فحص"
+    "CheckYourSelf":"افحص نفسك",
+    "Check":"افحص"
 }
