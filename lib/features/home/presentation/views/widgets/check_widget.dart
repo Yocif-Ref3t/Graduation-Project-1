@@ -27,7 +27,7 @@ class CheckWidget extends StatelessWidget {
           CustomButton(
             text: "Check".tr(context: context),
             onTap: () {
-              context.routerPush(Routes.checkView);
+              context.routerPush(Routes.PredictView);
             },
           ),
         ],

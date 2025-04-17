@@ -5,10 +5,12 @@ import 'package:graduation_project1/core/widgets/custom_text_field.dart';
 class TitleInputWidget extends StatelessWidget {
   final String title;
   final TextEditingController controller;
+  final String? Function(String?)? validator;
   const TitleInputWidget({
     super.key,
     required this.title,
     required this.controller,
+    this.validator,
   });
 
   @override
@@ -23,6 +25,8 @@ class TitleInputWidget extends StatelessWidget {
         ),
         CustomTextField(
           hintText: title,
+          validator: validator,
+          type: TextInputType.number,
           controller: controller,
         ),
       ],

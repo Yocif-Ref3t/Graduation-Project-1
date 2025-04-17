@@ -4,7 +4,7 @@ import 'package:graduation_project1/features/auth/presentation/views/complete_pr
 import 'package:graduation_project1/features/auth/presentation/views/login_view.dart';
 import 'package:graduation_project1/features/auth/presentation/views/register_view.dart';
 import 'package:graduation_project1/features/auth/presentation/views/reset_password_view.dart';
-import 'package:graduation_project1/features/check/presentation/views/check_view.dart';
+import 'package:graduation_project1/features/check/presentation/views/predict_view.dart';
 import 'package:graduation_project1/features/home/presentation/views/home_view.dart';
 import 'package:graduation_project1/features/layout/presentation/views/layout_view.dart';
 import 'package:graduation_project1/features/profile/presentation/views/change_password_view.dart';
@@ -14,6 +14,8 @@ import 'package:graduation_project1/features/settings/presentation/views/help_vi
 import 'package:graduation_project1/features/settings/presentation/views/language_view.dart';
 import 'package:graduation_project1/features/settings/presentation/views/settings_view.dart';
 import 'package:graduation_project1/features/splash/presentation/views/splash_view.dart';
+
+import '../../features/check/presentation/views/predict_result_view.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
@@ -72,8 +74,12 @@ abstract class AppRouter {
         builder: (context, state) => HelpView(),
       ),
       GoRoute(
-        path: Routes.checkView,
-        builder: (context, state) => CheckView(),
+        path: Routes.PredictView,
+        builder: (context, state) => PredictView(),
+      ),
+      GoRoute(
+        path: Routes.predictResultView,
+        builder: (context, state) => PredictResultView(),
       ),
     ],
   );

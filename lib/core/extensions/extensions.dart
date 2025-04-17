@@ -8,6 +8,10 @@ extension Context on BuildContext {
   /// To push new view on context by using Go Router
   void routerPush(String view) => GoRouter.of(this).push(view);
 
+  /// To push new view and pop current view on context by using Go Router
+  void routerPushReplacement(String view, [Object? extra]) =>
+      GoRouter.of(this).pushReplacement(view, extra: extra);
+
   /// To pop current view on context by using Go Router
   void routerPop() => GoRouter.of(this).pop();
 

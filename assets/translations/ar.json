@@ -51,5 +51,14 @@
     "PasswordNotMatch":"كلمة المرور غير متطابقة",
     "CheckYourSelf":"افحص نفسك",
     "Check":"افحص",
-    "Next":"التالي"
+    "Next":"التالي",
+    "NumberOfPregnancies":"عدد مرات الحمل",
+    "GlucoseLevel":"نسبة الجلوكوز",
+    "BloodPressure":"ضغط الدم",
+    "SkinThickness": "سمك الجلد (مم)",
+    "InsulinRatio":"نسبة الانسولين",
+    "BMIPercentage":"مؤشر كتلة الجسم",
+    "GeneticIncidenceRate": "نسبة الاصابه الوراثيه",
+    "CheckResult":"نتيجة الفحص",
+    "NumberValidationMSG":"هذا الحقل يجب ان يحتوي علي الرقام فقط"
 }

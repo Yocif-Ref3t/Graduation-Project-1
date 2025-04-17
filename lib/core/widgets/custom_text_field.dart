@@ -10,6 +10,7 @@ class CustomTextField extends StatelessWidget {
   final Function()? iconTap;
   final bool? obscureText;
   final String? Function(String? value)? validator;
+  final TextInputType? type;
   const CustomTextField({
     super.key,
     required this.hintText,
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
     this.validator,
     this.obscureText = false,
     this.errorText,
+    this.type,
   });
 
   @override
@@ -30,6 +32,7 @@ class CustomTextField extends StatelessWidget {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: validator,
       obscureText: obscureText!,
+      keyboardType: type,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         hintText: hintText,

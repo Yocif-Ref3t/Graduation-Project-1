@@ -63,6 +63,7 @@ class _CustomCounterState extends State<CustomCounter> {
         SizedBox(width: 10),
         GestureDetector(
           onTap: () {
+            if (currentCount == 0) return;
             currentCount--;
             setState(() {});
             controller.text = currentCount.toString();
