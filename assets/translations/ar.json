@@ -60,5 +60,7 @@
     "BMIPercentage":"مؤشر كتلة الجسم",
     "GeneticIncidenceRate": "نسبة الاصابه الوراثيه",
     "CheckResult":"نتيجة الفحص",
-    "NumberValidationMSG":"هذا الحقل يجب ان يحتوي علي الرقام فقط"
+    "NumberValidationMSG":"هذا الحقل يجب ان يحتوي علي الرقام فقط",
+    "NutritionalAdvice":"نصائح غذائيه"
+
 }

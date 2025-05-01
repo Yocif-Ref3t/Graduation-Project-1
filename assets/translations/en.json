@@ -61,6 +61,7 @@
     "BMIPercentage":"Body mass index",
     "GeneticIncidenceRate": "Genetic incidence rate",
     "CheckResult":"Check result",
-    "NumberValidationMSG":"This field must contains numbers only"
+    "NumberValidationMSG":"This field must contains numbers only",
+    "NutritionalAdvice":"Nutritional advice"
 
 }
